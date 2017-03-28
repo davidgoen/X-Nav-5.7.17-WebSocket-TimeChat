@@ -21,6 +21,7 @@ class SimpleEcho(WebSocket):
 
         try:
             self.sendMessage(str(self.data))
+            print str(self.data)
         except Exception as n:
             print n
 
@@ -41,6 +42,7 @@ class SimpleChat(WebSocket):
             if client != self:
                 try:
                     client.sendMessage(str(self.address[0]) + ' - ' + str(self.data))
+
                 except Exception as n:
                     print n
 
